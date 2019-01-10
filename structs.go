@@ -27,6 +27,14 @@ type GenericItem struct {
 	Count  int
 }
 
+type Genre GenericItem
+type Director GenericItem
+type Writer GenericItem
+type Producer GenericItem
+type Country GenericItem
+type Similar GenericItem
+type Role GenericItem
+
 type Metadata struct {
 	LibrarySectionType    string
 	RatingKey             string
@@ -71,15 +79,15 @@ type Metadata struct {
 	PrimaryExtraKey       string
 	RatingImage           string
 
-	Genre    []GenericItem
-	Director []GenericItem
-	Writer   []GenericItem
-	Producer []GenericItem
-	Country  []GenericItem
+	Genre    []Genre
+	Director []Director
+	Writer   []Writer
+	Producer []Producer
+	Country  []Country
 
-	Similar []GenericItem
+	Similar []Similar
 
-	Role []GenericItem
+	Role []Role
 }
 
 type PlexResponse struct {
