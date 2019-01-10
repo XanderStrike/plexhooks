@@ -32,6 +32,6 @@ func main() {
 	router := mux.NewRouter()
 	router.HandleFunc("/hook", hook).Methods("POST")
 
-	log.Println("Now serving on 0.0.0.0:8000")
+	log.Println("Now serving on 0.0.0.0:8000/hook")
 	log.Fatal(http.ListenAndServe("0.0.0.0:8000", router))
 }
