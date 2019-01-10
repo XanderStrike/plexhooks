@@ -1,7 +1,9 @@
 package plexhooks
 
-import "fmt"
+import "encoding/json"
 
-func ParseWebhook() {
-	fmt.Println("vim-go")
+func ParseWebhook(request []byte) (PlexResponse, error) {
+	var pr PlexResponse
+	err := json.Unmarshal(request, &pr)
+	return pr, err
 }
