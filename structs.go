@@ -18,13 +18,6 @@ type Player struct {
 	Uuid          string
 }
 
-type Genre struct {
-	Id     int
-	Filter string
-	Tag    string
-	Count  int
-}
-
 type GenericItem struct {
 	Id     int
 	Filter string
@@ -78,7 +71,7 @@ type Metadata struct {
 	PrimaryExtraKey       string
 	RatingImage           string
 
-	Genre    []Genre
+	Genre    []GenericItem
 	Director []GenericItem
 	Writer   []GenericItem
 	Producer []GenericItem
