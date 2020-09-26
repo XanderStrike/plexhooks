@@ -35,13 +35,18 @@ type Country GenericItem
 type Similar GenericItem
 type Role GenericItem
 
+type ExternalGuid struct {
+	Id string
+}
+
 type Metadata struct {
 	LibrarySectionType    string
 	RatingKey             string
 	Key                   string
 	ParentRatingKey       string
 	GrandparentRatingKey  string
-	Guid                  string
+	ExternalGuid          []ExternalGuid `json:"Guid"`
+	Guid                  string         `json:"guid"`
 	LibrarySectionTitle   string
 	LibrarySectionID      int
 	LibrarySectionKey     string
