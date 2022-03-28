@@ -63,7 +63,6 @@ type Metadata struct {
 	Tagline               string
 	Index                 int
 	ParentIndex           int
-	Rating                float32
 	RatingCount           int
 	AudienceRating        float32
 	ViewOffset            int
